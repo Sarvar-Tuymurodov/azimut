@@ -1,0 +1,9 @@
+$arabicTextStyle: 'asylbekm08maturakz';
+
+@font-face {
+    font-family: $arabicTextStyle;
+    src: url('../fonts/asylbekm08maturakz.ttf') format('ttf');
+    src: url('../fonts/asylbekm08maturakz.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

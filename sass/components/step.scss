@@ -1,0 +1,75 @@
+.step {
+    margin-bottom: 50px;
+    &__title {
+        width: 100%;
+
+        text-align: center;
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 15px;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 24px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 1280px) {
+            justify-content: space-around;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__box {
+        padding: 40px 15px;
+        max-width: 200px;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 8px 12px rgba(7, 45, 87, 0.15);
+        margin-bottom: 15px;
+        background-color: $color-white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        @media only screen and (max-width: $bp-small) {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        &--text {
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 15px;
+            color: $color-text;
+        }
+    }
+
+    &__direction {
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        & img {
+            content: url(../img/to-right.svg);
+
+            @media only screen and (max-width: $bp-small) {
+                content: url(../img/arrow-btn.png);
+            }
+        }
+    }
+}

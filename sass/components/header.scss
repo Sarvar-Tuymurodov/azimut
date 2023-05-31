@@ -1,0 +1,128 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #ffffff;
+    padding: 10px 0;
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
+
+    &__brand {
+        max-width: 307px;
+
+        @media only screen and (max-width: $bp-small) {
+            max-width: 250px;
+            order: 2;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            max-width: 160px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        position: relative;
+
+        @media only screen and (max-width: $bp-small) {
+            justify-content: end;
+            order: 1;
+            padding: 10px 0;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media only screen and (max-width: $bp-small) {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &--1 {
+            display: flex;
+        }
+
+        &--phone {
+            font-weight: 800;
+            font-size: 24px;
+            color: $color-text;
+            white-space: nowrap;
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__lang {
+        margin-left: 50px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-small) {
+            transform: translateY(60px);
+        }
+
+        & a {
+            font-size: 16px;
+            font-weight: 700;
+            color: $color-text;
+
+            &.active {
+                color: $color-yellow;
+            }
+
+            &:first-child {
+                margin-right: 4px;
+            }
+
+            &:last-child {
+                margin-left: 4px;
+            }
+        }
+    }
+}
+
+.nav__second {
+    padding: 15px 0;
+    background-color: #eeeeee;
+
+    @media only screen and (max-width: $bp-small) {
+        display: none;
+    }
+}
+
+.link {
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        font-size: 18px;
+        font-family: $arabicTextStyle;
+        color: $color-text;
+        margin: 0 10px;
+        padding: 10px 15px;
+        border-radius: 30px;
+        transition: all 0.2s;
+
+        &:nth-child(4) {
+            background-color: $color-yellow;
+            color: $color-white;
+        }
+
+        &:hover {
+            background-color: $color-yellow;
+            color: $color-white;
+        }
+    }
+}
